@@ -20,7 +20,7 @@ class Classroom {
       WHERE f.classID = ?`, [classID]);
     return rows;
   }
-
+ 
   static async getAllClass() {
     const connection = await connectDB();
     const [rows] = await connection.execute(`

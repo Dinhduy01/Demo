@@ -142,7 +142,7 @@ class Tutor {
       `SELECT Tutors.*, Users.fullName
        FROM Tutors
        JOIN Users ON Tutors.userID = Users.userID
-       WHERE Users.fullName LIKE ? AND Users.active = 1`,
+       WHERE Users.fullName LIKE ? AND Users.isActive = 1`,
       ["%" + search + "%"]
     );
     return rows;

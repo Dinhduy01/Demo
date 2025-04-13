@@ -18,7 +18,7 @@ class Payment {
   }
 
   static async createPayment(paymentInfo, tutorID) {
-    const connection = await connectDB();
+    const connection = await connectDB(); 
     const { id, orderCode, amount, status, createdAt } = paymentInfo;
     const [check] = await connection.execute(
       "SELECT COUNT(*) AS count FROM Payments WHERE id = ?",

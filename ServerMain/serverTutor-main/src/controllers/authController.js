@@ -36,17 +36,20 @@ class authController {
         fullName,
         avatar,
         dateOfBirth,
-        phone,
-        address,
+        phone: "0866722601",
+        address: "Ha Noi",
         role: "Student",
-        active: 1,
+        isActive: 1,
       });
 
+      console.log(user);
+      
       // Create student
       const student = await Student.createStudent(user.userID, {
         grade,
         school,
       });
+    
       if (!student) {
         return res.status(500).json({
           message: "Cannot create student",
