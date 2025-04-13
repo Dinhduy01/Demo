@@ -22,7 +22,7 @@ class Student {
     if (!rows[0]) {
       return "S1";
     } else {
-      let lastID = rows[0].studentID;
+      let lastID = rows[0].studentID.toString(); // Ensure lastID is a string  
       const alphabet = lastID.match(/[A-Za-z]+/)[0];
       const number = parseInt(lastID.match(/\d+/)[0]) + 1;
       return alphabet + number;
